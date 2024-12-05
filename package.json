@@ -4,11 +4,10 @@
   "description": "HyperCmd Utils",
   "main": "index.js",
   "dependencies": {
-    "@hyper-cmd/lib-keys": "https://github.com/holepunchto/hyper-cmd-lib-keys",
+    "hyper-cmd-lib-keys": "^0.1.1",
     "hyperdht": "^6.5.2",
     "minimist": "^1.2.5"
   },
-  "devDependencies": {},
   "bin": {
     "hyper-cmd-util-keygen": "./keygen.js"
   },

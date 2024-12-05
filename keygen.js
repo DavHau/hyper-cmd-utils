@@ -2,7 +2,7 @@
 const HyperDHT = require('hyperdht')
 const fs = require('fs')
 const argv = require('minimist')(process.argv.slice(2))
-const libKeys = require('@hyper-cmd/lib-keys')
+const libKeys = require('hyper-cmd-lib-keys')
 
 function storeKeyPair (k) {
   return JSON.stringify({
