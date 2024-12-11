@@ -15,7 +15,7 @@ const helpMsg = 'Usage:\nhyper-cmd-util-keygen --gen_seed | --gen_keypair filena
 
 if (argv.gen_seed) {
   console.log('Seed:', libKeys.randomBytes(32).toString('hex'))
-  process.exit(-1)
+  process.exit(0)
 }
 
 if (argv.gen_keypair) {
@@ -25,15 +25,15 @@ if (argv.gen_keypair) {
   if (typeof file !== 'string' || file.length < 2) {
     console.error('Please provide a valid filename')
     console.log(helpMsg)
-    process.exit(-1)
+    process.exit(1)
   }
 
   fs.writeFileSync(file, storeKeyPair(kp))
   console.log('Public Key:', kp.publicKey.toString('hex'))
-  process.exit(-1)
+  process.exit(0)
 }
 
 if (argv.help) {
   console.log(helpMsg)
-  process.exit(-1)
+  process.exit(1)
 }
